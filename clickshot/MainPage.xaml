@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="clickshot.MainPage" BackgroundColor="DarkGreen">
+    <RelativeLayout>
+        <BoxView Color="DarkGreen"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height}"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y}" />
+
+        <StackLayout x:Name="fondo" BackgroundColor="DarkGreen" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                     Property=Height,Factor=0.2,Constant=0}"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                     Property=Width,Factor=0.5,Constant=-175}" 
+                 VerticalOptions="CenterAndExpand" 
+                 HorizontalOptions="CenterAndExpand" >
+
+            <Label Text="" FontSize="60" x:Name="lbltitulo" TextColor="Black" />
+
+
+            <Label Text="a game By: sunseeker. Powered By: Xamarin" x:Name="lblcredito"/>
+            <Button BackgroundColor="White" x:Name="btniniciar" Clicked="btniniciar_Clicked" HorizontalOptions="Center" BorderColor="Black" Text="Iniciar" TextColor="Black"/>
+            <Button BackgroundColor="White" x:Name="btnreiniciar" Clicked="btnreiniciar_Clicked" HorizontalOptions="Center" BorderColor="Black" Text="Reiniciar?" TextColor="Black"/>
+            <Label Text="ultimo puntaje: " HorizontalOptions="Center" FontSize="30" x:Name="lblup" />
+            <Label Text="mejor puntaje: " HorizontalOptions="Center" FontSize="30" x:Name="lblmp" />
+        </StackLayout >
+
+        <Label HorizontalOptions="Center" TextColor="LightGray" FontSize="75" x:Name="lblcont" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.3}"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.9}"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.05}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.0}"/>
+
+        <Grid  BackgroundColor="DarkGreen" x:Name="juego" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.69}"
+              RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"
+              RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X}"
+              RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.31}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*" />
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="4*" />
+                <RowDefinition Height="4*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btn1" BackgroundColor="white" Clicked="btn1_Clicked"/>
+            <Button Grid.Column="1" x:Name="btn2" BackgroundColor="white" Clicked="btn2_Clicked" />
+            <Button Grid.Column="2" x:Name="btn3" BackgroundColor="white" Clicked="btn3_Clicked" />
+            <Button Grid.Column="3" x:Name="btn4" BackgroundColor="white" Clicked="btn4_Clicked"/>
+
+            <Button Grid.Row="1" x:Name="btn5" BackgroundColor="white" Clicked="btn5_Clicked"/>
+            <Button Grid.Row="1" Grid.Column="1" x:Name="btn6" BackgroundColor="white" Clicked="btn6_Clicked"/>
+            <Button Grid.Row="1" Grid.Column="2" x:Name="btn7" BackgroundColor="white" Clicked="btn7_Clicked"/>
+            <Button Grid.Row="1" Grid.Column="3" x:Name="btn8" BackgroundColor="white" Clicked="btn8_Clicked"/>
+
+            <Button Grid.Row="2" x:Name="btn9" BackgroundColor="white" Clicked="btn9_Clicked"/>
+            <Button Grid.Row="2" Grid.Column="1" x:Name="btn10" BackgroundColor="white" Clicked="btn10_Clicked"/>
+            <Button Grid.Row="2" Grid.Column="2" x:Name="btn11" BackgroundColor="white" Clicked="btn11_Clicked"/>
+            <Button Grid.Row="2" Grid.Column="3" x:Name="btn12" BackgroundColor="white" Clicked="btn12_Clicked"/>
+
+            <Button Grid.Row="3" x:Name="btn13" BackgroundColor="white" Clicked="btn13_Clicked"/>
+            <Button Grid.Row="3" Grid.Column="1" x:Name="btn14" BackgroundColor="white" Clicked="btn14_Clicked"/>
+            <Button Grid.Row="3" Grid.Column="2" x:Name="btn15" BackgroundColor="white" Clicked="btn15_Clicked"/>
+            <Button Grid.Row="3" Grid.Column="3" x:Name="btn16" BackgroundColor="white" Clicked="btn16_Clicked"/>
+        </Grid>
+    </RelativeLayout>
+
+
+</ContentPage>
